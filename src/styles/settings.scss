@@ -1,0 +1,47 @@
+/**
+ * src/styles/settings.scss
+ *
+ * Configures SASS variables and Vuetify overwrites
+ */
+
+// https://vuetifyjs.com/features/sass-variables/`
+// @use 'vuetify/settings' with (
+//   $color-pack: false
+// );
+
+// Tipografías corporativas
+// Se usa Inter para el cuerpo y Outfit para títulos para mayor contraste visual.
+
+:root {
+  --app-font-body: 'Inter', 'Roboto', system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, 'Noto Sans', Ubuntu, Cantarell, sans-serif;
+  --app-font-heading: 'Outfit', 'Inter', system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, 'Noto Sans', Ubuntu, Cantarell, sans-serif;
+}
+
+html, body, #app {
+  font-family: var(--app-font-body);
+}
+
+.v-application {
+  font-family: var(--app-font-body) !important;
+}
+
+/* Botones mantienen la tipografía de cuerpo para consistencia en UI */
+.v-btn {
+  font-family: var(--app-font-body) !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.02em !important;
+  text-transform: none !important;
+}
+
+/* Títulos con Outfit para dar personalidad y jerarquía clara */
+h1, h2, h3 {
+  font-family: var(--app-font-heading);
+}
+
+/* Utilidades tipográficas de Vuetify */
+.v-application .text-h1,
+.v-application .text-h2,
+.v-application .text-h3 {
+  font-family: var(--app-font-heading) !important;
+  letter-spacing: -0.01em;
+}
